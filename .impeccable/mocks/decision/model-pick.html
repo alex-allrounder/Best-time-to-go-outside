@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=390">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:390px;height:844px;overflow:hidden}
+body{background:#FFFFFF;color:#0B2545;font-family:Barlow,system-ui,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#0B2545;color:#fff}
+.logo{font-family:'Barlow Condensed';font-weight:700;font-size:22px;letter-spacing:.06em}
+.flag{background:#1E9E4A;color:#fff;padding:22px 16px 26px;position:relative}
+.flag:after{content:"";position:absolute;right:0;top:0;border-left:40px solid transparent;border-top:120px solid #178a3f}
+.k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.time{font-family:'Barlow Condensed';font-weight:700;font-size:64px;line-height:1;margin:8px 0}
+.verdict{font-family:'Barlow Condensed';font-size:26px;font-weight:700;text-transform:uppercase}
+.reason{font-size:16px;margin-top:6px}
+.board{margin:16px;background:#0B2545;color:#fff;border-radius:6px;padding:14px}
+.pennants{display:flex;gap:4px;margin-top:10px}
+.p{flex:1;height:44px;clip-path:polygon(0 0,100% 0,100% 70%,50% 100%,0 70%)}
+.hrs{display:flex;gap:4px;font-size:11px;margin-top:6px}
+.hrs span{flex:1;text-align:center;opacity:.8}
+.form{margin:0 16px}
+.label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:14px 0 6px;color:#3d5170}
+.seg{display:flex;border:2px solid #0B2545;border-radius:6px;overflow:hidden}
+.seg span{flex:1;text-align:center;padding:10px 0;font-weight:600;font-size:14px}
+.seg .on{background:#0B2545;color:#fff}
+</style></head><body>
+<header><div class="logo">UV GO</div><div>Lahore</div></header>
+<section class="flag">
+  <div class="k">Green flag · best time today</div>
+  <div class="time">16:00–18:00</div>
+  <div class="verdict">Good to go</div>
+  <p class="reason">UV 3, use sunscreen</p>
+</section>
+<section class="board">
+  <div class="k">Today's flags</div>
+  <div class="pennants">
+    <i class="p" style="background:#1E9E4A"></i><i class="p" style="background:#1E9E4A"></i><i class="p" style="background:#FFD100"></i><i class="p" style="background:#D7262E"></i><i class="p" style="background:#D7262E"></i><i class="p" style="background:#D7262E"></i><i class="p" style="background:#FFD100"></i><i class="p" style="background:#1E9E4A"></i><i class="p" style="background:#1E9E4A"></i><i class="p" style="background:#1E9E4A"></i>
+  </div>
+  <div class="hrs"><span>08</span><span>09</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div>
+</section>
+<section class="form">
+  <div class="label">Free time</div>
+  <div class="seg"><span>13:00</span><span>19:00</span></div>
+  <div class="label">How long</div>
+  <div class="seg"><span>30 m</span><span>1 h</span><span class="on">2 h</span><span>3 h</span></div>
+  <div class="label">Activity</div>
+  <div class="seg"><span>Active</span><span class="on">Relaxed</span><span>In the sun</span></div>
+</section>
+</body></html>
