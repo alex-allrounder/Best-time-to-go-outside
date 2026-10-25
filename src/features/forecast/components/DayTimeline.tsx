@@ -7,8 +7,12 @@ import { HourDetailSheet } from '@/features/forecast/components/HourDetailSheet'
 import { formatHour } from '@/lib/time'
 import { cn } from '@/lib/utils'
 
-/** Fixed column width so the free-time band and best-window ring can be positioned exactly. */
-const CELL_PX = 52
+/**
+ * Minimum column width. Columns share the width equally when there is room (desktop) and
+ * scroll at this width when there is not (phone). Overlays are placed in % of the row.
+ */
+const MIN_CELL_PX = 52
+const pct = (n: number, total: number) => `${(n / total) * 100}%`
 
 function describeHour(h: ScoredHour, isNow: boolean): string {
   const time = isNow ? `Now, ${formatHour(h.hour)}` : formatHour(h.hour)
@@ -22,11 +26,13 @@ function HourCell({
   hour,
   isNow,
   inBest,
+  cellWidth,
   onSelect,
 }: {
   hour: ScoredHour
   isNow: boolean
   inBest: boolean
+  cellWidth: string
   onSelect: () => void
 }) {
   const meta = hour.verdict ? verdictMeta[hour.verdict] : null
@@ -37,7 +43,7 @@ function HourCell({
       type="button"
       onClick={onSelect}
       aria-label={describeHour(hour, isNow)}
-      style={{ width: CELL_PX }}
+      style={{ width: cellWidth }}
       className={cn(
         'group relative z-10 flex shrink-0 flex-col items-center gap-2 rounded-2xl py-3 outline-none focus-visible:ring-2 focus-visible:ring-ring',
         hour.status === 'past' && 'opacity-45',
@@ -142,13 +148,14 @@ export function DayTimeline({
   useEffect(() => {
     const el = scrollerRef.current
     if (!el) return
-    const span = (bestStart >= 0 ? bestLength : Math.min(freeIndexes.length, 4)) * CELL_PX
+    const cell = el.scrollWidth / hours.length
+    const span = (bestStart >= 0 ? bestLength : Math.min(freeIndexes.length, 4)) * cell
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     el.scrollTo({
-      left: Math.max(0, focusIndex * CELL_PX - (el.clientWidth - span) / 2),
+      left: Math.max(0, focusIndex * cell - (el.clientWidth - span) / 2),
       behavior: reduce ? 'auto' : 'smooth',
     })
-  }, [focusIndex, bestStart, bestLength, freeIndexes.length])
+  }, [focusIndex, bestStart, bestLength, freeIndexes.length, hours.length])
 
   return (
     <SectionCard
@@ -161,19 +168,25 @@ export function DayTimeline({
         ref={scrollerRef}
         className="-mx-4 scrollbar-none overflow-x-auto overscroll-x-contain px-4 sm:-mx-5 sm:px-5"
       >
-        <div className="relative flex" style={{ width: hours.length * CELL_PX }}>
+        <div
+          className="relative flex"
+          style={{ width: `max(${hours.length * MIN_CELL_PX}px, 100%)` }}
+        >
           {freeStart !== undefined && (
             <div
               aria-hidden
               className="pointer-events-none absolute inset-y-0 rounded-2xl bg-plan"
-              style={{ left: freeStart * CELL_PX, width: freeIndexes.length * CELL_PX }}
+              style={{
+                left: pct(freeStart, hours.length),
+                width: pct(freeIndexes.length, hours.length),
+              }}
             />
           )}
           {bestStart >= 0 && (
             <div
               aria-hidden
               className="pointer-events-none absolute inset-y-0 z-20 rounded-2xl ring-2 ring-foreground transition-[left,width] duration-300 ease-out ring-inset motion-reduce:transition-none"
-              style={{ left: bestStart * CELL_PX, width: bestLength * CELL_PX }}
+              style={{ left: pct(bestStart, hours.length), width: pct(bestLength, hours.length) }}
             />
           )}
           {hours.map((h, i) => (
@@ -182,6 +195,7 @@ export function DayTimeline({
               hour={h}
               isNow={h.hour === nowHour}
               inBest={bestStart >= 0 && i >= bestStart && i < bestStart + bestLength}
+              cellWidth={pct(1, hours.length)}
               onSelect={() => {
                 setSelected(h)
                 setSheetOpen(true)

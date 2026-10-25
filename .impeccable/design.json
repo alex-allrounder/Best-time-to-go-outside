@@ -1,0 +1,910 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T09:09:32.648Z",
+  "title": "Design System: UV GO",
+  "extensions": {
+    "colorMeta": {
+      "sky-field": {
+        "role": "primary",
+        "displayName": "Daylight Sky Blue",
+        "canonical": "#1d5fd6",
+        "oklch": "oklch(51.9% 0.195 261.2)",
+        "tonalRamp": [
+          "#00062c",
+          "#001d60",
+          "#00369b",
+          "#1457cd",
+          "#417deb",
+          "#76a4f7",
+          "#aacaff",
+          "#e0efff"
+        ]
+      },
+      "sky-field-night": {
+        "role": "primary",
+        "displayName": "Night Field Navy",
+        "canonical": "#132c57",
+        "oklch": "oklch(30.0% 0.084 260.5)",
+        "tonalRamp": [
+          "#00062c",
+          "#0a234d",
+          "#27416e",
+          "#456191",
+          "#6583b5",
+          "#87a6da",
+          "#aacaff",
+          "#dff0ff"
+        ]
+      },
+      "on-sky": {
+        "role": "neutral",
+        "displayName": "On-Sky White",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "on-sky-muted": {
+        "role": "neutral",
+        "displayName": "On-Sky Haze",
+        "canonical": "#e3edff",
+        "oklch": "oklch(94.4% 0.027 262.3)",
+        "tonalRamp": [
+          "#060b16",
+          "#1e2532",
+          "#3a4250",
+          "#596271",
+          "#7a8393",
+          "#9ca5b6",
+          "#c0cadb",
+          "#e5efff"
+        ]
+      },
+      "on-sky-muted-night": {
+        "role": "neutral",
+        "displayName": "On-Night Haze",
+        "canonical": "#c7d6f5",
+        "oklch": "oklch(87.5% 0.046 264.9)",
+        "tonalRamp": [
+          "#030a1e",
+          "#1a243b",
+          "#36425b",
+          "#54617c",
+          "#75829f",
+          "#97a5c3",
+          "#bbc9e8",
+          "#e1efff"
+        ]
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Daylight Sky Blue (interactive)",
+        "canonical": "#1d5fd6",
+        "oklch": "oklch(51.9% 0.195 261.2)",
+        "tonalRamp": [
+          "#00062c",
+          "#001d60",
+          "#00369b",
+          "#1457cd",
+          "#417deb",
+          "#76a4f7",
+          "#aacaff",
+          "#e0efff"
+        ]
+      },
+      "primary-night": {
+        "role": "primary",
+        "displayName": "Soft Night Blue",
+        "canonical": "#7fb0ff",
+        "oklch": "oklch(75.5% 0.126 259.6)",
+        "tonalRamp": [
+          "#00062c",
+          "#001d60",
+          "#123e83",
+          "#335fa8",
+          "#5382cd",
+          "#75a5f4",
+          "#a8cbff",
+          "#dff0ff"
+        ]
+      },
+      "plan-band": {
+        "role": "primary",
+        "displayName": "Free-Time Wash",
+        "canonical": "rgb(29 95 214 / 0.1)",
+        "oklch": "oklch(51.9% 0.195 261.2)",
+        "tonalRamp": [
+          "#00062c",
+          "#001d60",
+          "#00369b",
+          "#1457cd",
+          "#417deb",
+          "#76a4f7",
+          "#aacaff",
+          "#e0efff"
+        ]
+      },
+      "plan-band-night": {
+        "role": "primary",
+        "displayName": "Free-Time Wash (night)",
+        "canonical": "rgb(127 176 255 / 0.12)",
+        "oklch": "oklch(75.5% 0.126 259.6)",
+        "tonalRamp": [
+          "#00062c",
+          "#001d60",
+          "#123e83",
+          "#335fa8",
+          "#5382cd",
+          "#75a5f4",
+          "#a8cbff",
+          "#dff0ff"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Pale Sky Ground",
+        "canonical": "#e8f1fb",
+        "oklch": "oklch(95.4% 0.017 250.8)",
+        "tonalRamp": [
+          "#060c12",
+          "#1f262d",
+          "#3c434b",
+          "#5a626b",
+          "#7b838c",
+          "#9ea6af",
+          "#c1cad4",
+          "#e7f0fa"
+        ]
+      },
+      "ground-night": {
+        "role": "neutral",
+        "displayName": "Night Ground",
+        "canonical": "#0c1322",
+        "oklch": "oklch(18.8% 0.033 264.4)",
+        "tonalRamp": [
+          "#050b19",
+          "#1d2535",
+          "#394254",
+          "#586174",
+          "#798397",
+          "#9ba5ba",
+          "#bfc9df",
+          "#e4efff"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Card White",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "card-night": {
+        "role": "neutral",
+        "displayName": "Slate Card",
+        "canonical": "#151d2e",
+        "oklch": "oklch(23.2% 0.035 264.5)",
+        "tonalRamp": [
+          "#050a1a",
+          "#1c2536",
+          "#394255",
+          "#576176",
+          "#788398",
+          "#9aa5bc",
+          "#bec9e1",
+          "#e3efff"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Slate Ink",
+        "canonical": "#0f172a",
+        "oklch": "oklch(20.8% 0.040 265.8)",
+        "tonalRamp": [
+          "#040a1c",
+          "#1c2539",
+          "#384258",
+          "#566178",
+          "#77829b",
+          "#99a5bf",
+          "#bdc9e4",
+          "#e2efff"
+        ]
+      },
+      "ink-night": {
+        "role": "neutral",
+        "displayName": "Frost Ink",
+        "canonical": "#e6edf7",
+        "oklch": "oklch(94.4% 0.015 257.2)",
+        "tonalRamp": [
+          "#070b12",
+          "#20252d",
+          "#3d424a",
+          "#5c626a",
+          "#7d838c",
+          "#9fa6af",
+          "#c3cad3",
+          "#e8eff9"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "canonical": "#475569",
+        "oklch": "oklch(44.6% 0.037 257.3)",
+        "tonalRamp": [
+          "#030b1b",
+          "#192637",
+          "#354356",
+          "#546277",
+          "#748499",
+          "#97a6bd",
+          "#bacbe2",
+          "#dff0ff"
+        ]
+      },
+      "ink-muted-night": {
+        "role": "neutral",
+        "displayName": "Muted Frost",
+        "canonical": "#a3b1c6",
+        "oklch": "oklch(75.6% 0.034 258.4)",
+        "tonalRamp": [
+          "#040b19",
+          "#1b2536",
+          "#374354",
+          "#566275",
+          "#768397",
+          "#98a6bb",
+          "#bccae0",
+          "#e1f0ff"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#eef4fc",
+        "oklch": "oklch(96.5% 0.012 255.5)",
+        "tonalRamp": [
+          "#080b10",
+          "#21252b",
+          "#3e4249",
+          "#5d6268",
+          "#7d838a",
+          "#a0a6ad",
+          "#c4cad1",
+          "#e9eff7"
+        ]
+      },
+      "muted-night": {
+        "role": "neutral",
+        "displayName": "Mist (night)",
+        "canonical": "#1d2738",
+        "oklch": "oklch(27.2% 0.035 260.8)",
+        "tonalRamp": [
+          "#040b1a",
+          "#1b2536",
+          "#374255",
+          "#566275",
+          "#778398",
+          "#99a6bb",
+          "#bdcae0",
+          "#e1efff"
+        ]
+      },
+      "accent": {
+        "role": "neutral",
+        "displayName": "Sky Mist",
+        "canonical": "#e3edfc",
+        "oklch": "oklch(94.3% 0.023 258.4)",
+        "tonalRamp": [
+          "#060b15",
+          "#1e2530",
+          "#3b434e",
+          "#59626f",
+          "#7a8390",
+          "#9ca6b4",
+          "#c0cad8",
+          "#e5effe"
+        ]
+      },
+      "accent-night": {
+        "role": "neutral",
+        "displayName": "Sky Mist (night)",
+        "canonical": "#1f2b40",
+        "oklch": "oklch(28.8% 0.042 261.2)",
+        "tonalRamp": [
+          "#030a1d",
+          "#19253a",
+          "#354259",
+          "#54627a",
+          "#74839c",
+          "#96a6c0",
+          "#bacae5",
+          "#e0efff"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#dbe5f1",
+        "oklch": "oklch(91.8% 0.020 252.9)",
+        "tonalRamp": [
+          "#060c13",
+          "#1e262f",
+          "#3b434c",
+          "#5a626c",
+          "#7a838e",
+          "#9da6b1",
+          "#c0cad6",
+          "#e6f0fc"
+        ]
+      },
+      "border-night": {
+        "role": "neutral",
+        "displayName": "Hairline (night)",
+        "canonical": "#243048",
+        "oklch": "oklch(31.0% 0.046 263.5)",
+        "tonalRamp": [
+          "#030a1e",
+          "#19253c",
+          "#35425b",
+          "#54617c",
+          "#74839f",
+          "#96a5c3",
+          "#bacae8",
+          "#e1efff"
+        ]
+      },
+      "input": {
+        "role": "neutral",
+        "displayName": "Field Edge",
+        "canonical": "#cdd9e8",
+        "oklch": "oklch(88.1% 0.024 254.0)",
+        "tonalRamp": [
+          "#050c15",
+          "#1d2631",
+          "#39434f",
+          "#58626f",
+          "#798391",
+          "#9ba6b4",
+          "#bfcad9",
+          "#e4f0ff"
+        ]
+      },
+      "input-night": {
+        "role": "neutral",
+        "displayName": "Field Edge (night)",
+        "canonical": "#2c3a55",
+        "oklch": "oklch(34.9% 0.051 263.0)",
+        "tonalRamp": [
+          "#020920",
+          "#18243e",
+          "#34425d",
+          "#52617f",
+          "#7283a2",
+          "#94a6c6",
+          "#b8caeb",
+          "#e1efff"
+        ]
+      },
+      "verdict-good": {
+        "role": "tertiary",
+        "displayName": "Go Green",
+        "canonical": "#0ca30c",
+        "oklch": "oklch(62.1% 0.207 142.6)",
+        "tonalRamp": [
+          "#001200",
+          "#003200",
+          "#005500",
+          "#007b00",
+          "#309b2c",
+          "#71ba6c",
+          "#a9d8a5",
+          "#e0f6dd"
+        ]
+      },
+      "verdict-ok": {
+        "role": "tertiary",
+        "displayName": "Caution Amber",
+        "canonical": "#fab219",
+        "oklch": "oklch(81.1% 0.164 78.5)",
+        "tonalRamp": [
+          "#1c0300",
+          "#441500",
+          "#6e2e00",
+          "#924f00",
+          "#b67200",
+          "#d19a34",
+          "#e8c389",
+          "#feecd1"
+        ]
+      },
+      "verdict-bad": {
+        "role": "tertiary",
+        "displayName": "Stop Red",
+        "canonical": "#d03b3b",
+        "oklch": "oklch(57.5% 0.186 25.2)",
+        "tonalRamp": [
+          "#240000",
+          "#520000",
+          "#860004",
+          "#b31923",
+          "#d84b48",
+          "#ec827a",
+          "#fcb4ad",
+          "#ffe5e1"
+        ]
+      },
+      "verdict-good-ink": {
+        "role": "tertiary",
+        "displayName": "Go Green Ink",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "verdict-ok-ink": {
+        "role": "tertiary",
+        "displayName": "Caution Amber Ink",
+        "canonical": "#0b0b0b",
+        "oklch": "oklch(15.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "verdict-bad-ink": {
+        "role": "tertiary",
+        "displayName": "Stop Red Ink",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "verdict-good-tint": {
+        "role": "tertiary",
+        "displayName": "Go Green Tint",
+        "canonical": "#e2f3e2",
+        "oklch": "oklch(94.7% 0.029 145.3)",
+        "tonalRamp": [
+          "#040e05",
+          "#1c291c",
+          "#394639",
+          "#576657",
+          "#788778",
+          "#9aaa9a",
+          "#becebe",
+          "#e3f4e3"
+        ]
+      },
+      "verdict-ok-tint": {
+        "role": "tertiary",
+        "displayName": "Caution Amber Tint",
+        "canonical": "#fef0d2",
+        "oklch": "oklch(95.8% 0.042 86.0)",
+        "tonalRamp": [
+          "#130900",
+          "#2e230a",
+          "#4c4127",
+          "#6c6046",
+          "#8e8166",
+          "#b1a488",
+          "#d5c8ab",
+          "#fbedd1"
+        ]
+      },
+      "verdict-bad-tint": {
+        "role": "tertiary",
+        "displayName": "Stop Red Tint",
+        "canonical": "#f9e1e1",
+        "oklch": "oklch(92.9% 0.026 17.6)",
+        "tonalRamp": [
+          "#150707",
+          "#312020",
+          "#4f3d3d",
+          "#705b5c",
+          "#927c7c",
+          "#b59f9f",
+          "#dac3c3",
+          "#ffe8e8"
+        ]
+      },
+      "verdict-good-text": {
+        "role": "tertiary",
+        "displayName": "Go Green Text",
+        "canonical": "#0b5c0b",
+        "oklch": "oklch(41.4% 0.133 142.7)",
+        "tonalRamp": [
+          "#001200",
+          "#003200",
+          "#005200",
+          "#2a7327",
+          "#4d9649",
+          "#71ba6c",
+          "#a9d8a5",
+          "#e0f6dd"
+        ]
+      },
+      "verdict-ok-text": {
+        "role": "tertiary",
+        "displayName": "Caution Amber Text",
+        "canonical": "#7a4a00",
+        "oklch": "oklch(45.4% 0.100 68.1)",
+        "tonalRamp": [
+          "#1f0100",
+          "#421600",
+          "#633500",
+          "#865513",
+          "#a9763b",
+          "#ce995e",
+          "#efbf8c",
+          "#ffead3"
+        ]
+      },
+      "verdict-bad-text": {
+        "role": "tertiary",
+        "displayName": "Stop Red Text",
+        "canonical": "#a51f1f",
+        "oklch": "oklch(47.0% 0.170 26.8)",
+        "tonalRamp": [
+          "#240000",
+          "#520000",
+          "#860000",
+          "#ad2826",
+          "#d54f47",
+          "#ec8278",
+          "#fcb4ab",
+          "#ffe5e0"
+        ]
+      },
+      "verdict-good-tint-night": {
+        "role": "tertiary",
+        "displayName": "Go Green Tint (night)",
+        "canonical": "#1b3020",
+        "oklch": "oklch(28.6% 0.040 150.8)",
+        "tonalRamp": [
+          "#001004",
+          "#162b1b",
+          "#324837",
+          "#516856",
+          "#728976",
+          "#94ad98",
+          "#b7d1bc",
+          "#dcf7e1"
+        ]
+      },
+      "verdict-ok-tint-night": {
+        "role": "tertiary",
+        "displayName": "Caution Amber Tint (night)",
+        "canonical": "#3a2f17",
+        "oklch": "oklch(31.1% 0.041 85.4)",
+        "tonalRamp": [
+          "#130900",
+          "#2e230b",
+          "#4c4028",
+          "#6c6046",
+          "#8e8166",
+          "#b1a488",
+          "#d5c8ab",
+          "#fbedd1"
+        ]
+      },
+      "verdict-bad-tint-night": {
+        "role": "tertiary",
+        "displayName": "Stop Red Tint (night)",
+        "canonical": "#3a1d22",
+        "oklch": "oklch(27.2% 0.046 9.5)",
+        "tonalRamp": [
+          "#1a0307",
+          "#381b20",
+          "#57383d",
+          "#79575b",
+          "#9c777c",
+          "#c09a9f",
+          "#e5bdc3",
+          "#ffe4e8"
+        ]
+      },
+      "verdict-good-text-night": {
+        "role": "tertiary",
+        "displayName": "Go Green Text (night)",
+        "canonical": "#6ee56e",
+        "oklch": "oklch(82.6% 0.192 143.6)",
+        "tonalRamp": [
+          "#001200",
+          "#003200",
+          "#005600",
+          "#007a00",
+          "#2a9c2f",
+          "#6fba6e",
+          "#a8d8a6",
+          "#dff6de"
+        ]
+      },
+      "verdict-ok-text-night": {
+        "role": "tertiary",
+        "displayName": "Caution Amber Text (night)",
+        "canonical": "#fcc95a",
+        "oklch": "oklch(86.1% 0.139 84.2)",
+        "tonalRamp": [
+          "#1a0500",
+          "#401900",
+          "#643700",
+          "#865700",
+          "#a97900",
+          "#cb9d31",
+          "#e4c588",
+          "#fbedd1"
+        ]
+      },
+      "verdict-bad-text-night": {
+        "role": "tertiary",
+        "displayName": "Stop Red Text (night)",
+        "canonical": "#ff8f8f",
+        "oklch": "oklch(77.0% 0.136 20.7)",
+        "tonalRamp": [
+          "#240000",
+          "#520006",
+          "#7a1321",
+          "#a03a3f",
+          "#c65c5f",
+          "#ec8181",
+          "#fcb3b1",
+          "#ffe5e3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Best-window time on the sky field; one per screen, tabular, no wrap."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Sky-field prompt when no place is set; error and no-window headlines."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Place button, sheet titles, score, runner-up window times."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "The one-line verdict reason; at weight 400 the sky-field 'Best time to go outside' line."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "List names, select values, breakdown rows."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Muted module headings with a 16px icon; field labels at 500 in ink."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Hour labels, legend, score notes, footer."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-lift",
+        "value": "0 1px 2px rgb(15 23 42 / 0.04), 0 6px 20px -4px rgb(15 23 42 / 0.08)",
+        "purpose": "Every module card, light theme (--card-shadow)."
+      },
+      {
+        "name": "card-lift-night",
+        "value": "0 1px 2px rgb(0 0 0 / 0.3), 0 6px 20px -4px rgb(0 0 0 / 0.35)",
+        "purpose": "Every module card, dark theme (--card-shadow)."
+      },
+      {
+        "name": "segment-chip",
+        "value": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "purpose": "Selected segmented-control item only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "answer-settle",
+        "value": "500ms ease-out; opacity 0 -> 1, translateY(4px) -> 0",
+        "purpose": "The one authored moment: the window time and the verdict card content when the answer changes. Removed under reduced motion."
+      },
+      {
+        "name": "ring-slide",
+        "value": "left, width 300ms ease-out",
+        "purpose": "Best-window ring moving along the hourly strip. Removed under reduced motion."
+      },
+      {
+        "name": "press",
+        "value": "transform 150ms ease-out; scale 0.94 (hour pill), 0.97 (segment)",
+        "purpose": "Press feedback on tappable marks."
+      },
+      {
+        "name": "strip-scroll",
+        "value": "scrollTo smooth; auto under reduced motion",
+        "purpose": "Centres the best window in the hourly strip when the answer changes."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "380px",
+        "purpose": "Segment icons hide below this width."
+      },
+      {
+        "name": "sm",
+        "value": "640px",
+        "purpose": "Gutters 16 -> 24px, module padding 16 -> 20px, checklist in two columns."
+      },
+      {
+        "name": "md",
+        "value": "768px",
+        "purpose": "The card grid becomes two columns with 16px gaps."
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid var(--ring); outline-offset: 2px",
+      "purpose": "Global :focus-visible treatment."
+    }
+  },
+  "components": [
+    {
+      "name": "Verdict Badge",
+      "kind": "chip",
+      "refersTo": "verdict-badge-good",
+      "description": "Verdict as icon + label on its tint; small in sheets, large on the verdict card.",
+      "html": "<div class=\"ds-badges\"><span class=\"ds-badge ds-badge-good\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg>Good</span><span class=\"ds-badge ds-badge-ok\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"M12 8v4\"/><path d=\"M12 16h.01\"/></svg>OK with protection</span><span class=\"ds-badge ds-badge-bad\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m15 9-6 6\"/><path d=\"m9 9 6 6\"/></svg>Not recommended</span></div>",
+      "css": ".ds-badges{display:flex;flex-wrap:wrap;gap:8px;font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;}.ds-badge{display:inline-flex;align-items:center;gap:6px;border-radius:9999px;padding:4px 10px;font-size:14px;line-height:20px;font-weight:600}.ds-badge svg{flex-shrink:0}.ds-badge-good{background:var(--verdict-good-tint,#e2f3e2);color:var(--verdict-good-text,#0b5c0b)}.ds-badge-ok{background:var(--verdict-ok-tint,#fef0d2);color:var(--verdict-ok-text,#7a4a00)}.ds-badge-bad{background:var(--verdict-bad-tint,#f9e1e1);color:var(--verdict-bad-text,#a51f1f)}"
+    },
+    {
+      "name": "Verdict Card",
+      "kind": "card",
+      "refersTo": "verdict-card",
+      "description": "The answer card that overlaps the sky field: large badge, score, one-line reason; settles in when the answer changes.",
+      "html": "<section class=\"ds-verdict-card\"><div class=\"ds-vc-row\"><span class=\"ds-vc-badge\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg>Good</span><span class=\"ds-vc-score\"><span class=\"ds-vc-num\">1.4</span><span class=\"ds-vc-note\">score, lower is better</span></span></div><p class=\"ds-vc-reason\">UV 2 and dry, with a light breeze.</p></section>",
+      "css": ".ds-verdict-card{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;background:var(--card,#fff);color:var(--card-foreground,#0f172a);border-radius:22px;padding:20px;box-shadow:var(--card-shadow,0 1px 2px rgb(15 23 42/.04),0 6px 20px -4px rgb(15 23 42/.08));display:flex;flex-direction:column;gap:12px;max-width:360px;animation:ds-settle .5s ease-out}@keyframes ds-settle{from{opacity:0;transform:translateY(4px)}}@media (prefers-reduced-motion:reduce){.ds-verdict-card{animation:none}}.ds-vc-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.ds-vc-badge{display:inline-flex;align-items:center;gap:6px;border-radius:9999px;padding:6px 12px;font-size:16px;line-height:24px;font-weight:600;background:var(--verdict-good-tint,#e2f3e2);color:var(--verdict-good-text,#0b5c0b)}.ds-vc-score{display:flex;flex-direction:column;align-items:flex-end;line-height:1.25}.ds-vc-num{font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}.ds-vc-note{font-size:12px;color:var(--muted-foreground,#475569)}.ds-vc-reason{margin:0;font-size:18px;line-height:1.375;font-weight:500;text-wrap:pretty}"
+    },
+    {
+      "name": "Module Card",
+      "kind": "card",
+      "refersTo": "module-card",
+      "description": "Rounded weather-app module with a muted icon heading and an optional right-side action.",
+      "html": "<section class=\"ds-card\"><div class=\"ds-card-head\"><h2 class=\"ds-card-title\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><line x1=\"21\" x2=\"14\" y1=\"4\" y2=\"4\"/><line x1=\"10\" x2=\"3\" y1=\"4\" y2=\"4\"/><line x1=\"21\" x2=\"12\" y1=\"12\" y2=\"12\"/><line x1=\"8\" x2=\"3\" y1=\"12\" y2=\"12\"/><line x1=\"21\" x2=\"16\" y1=\"20\" y2=\"20\"/><line x1=\"12\" x2=\"3\" y1=\"20\" y2=\"20\"/><line x1=\"14\" x2=\"14\" y1=\"2\" y2=\"6\"/><line x1=\"8\" x2=\"8\" y1=\"10\" y2=\"14\"/><line x1=\"16\" x2=\"16\" y1=\"18\" y2=\"22\"/></svg>Your plan</h2><button class=\"ds-ghost\">Reset</button></div><p class=\"ds-card-body\">09:00–18:00 · 1 h · Active</p></section>",
+      "css": ".ds-card{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;background:var(--card,#fff);color:var(--card-foreground,#0f172a);border-radius:22px;padding:16px;box-shadow:var(--card-shadow,0 1px 2px rgb(15 23 42/.04),0 6px 20px -4px rgb(15 23 42/.08));max-width:360px}@media (min-width:640px){.ds-card{padding:20px}}.ds-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:24px;margin-bottom:12px}.ds-card-title{display:flex;align-items:center;gap:8px;margin:0;font-size:14px;line-height:20px;font-weight:600;color:var(--muted-foreground,#475569)}.ds-ghost{height:32px;padding:0 10px;border:0;border-radius:10px;background:transparent;color:var(--muted-foreground,#475569);font:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:background .15s}.ds-ghost:hover{background:var(--muted,#eef4fc);color:var(--foreground,#0f172a)}.ds-ghost:focus-visible{outline:2px solid var(--ring,#1d5fd6);outline-offset:2px}.ds-card-body{margin:0;font-size:16px;line-height:24px;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Sky Field Header",
+      "kind": "nav",
+      "refersTo": "button-on-sky-solid",
+      "description": "Flat sky field: place button, locate icon, best window in display tabular numerals, and the on-sky pill buttons.",
+      "html": "<header class=\"ds-sky\"><div class=\"ds-sky-top\"><button class=\"ds-sky-place\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>Lisbon</span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></button><button class=\"ds-sky-icon\" aria-label=\"Use my location\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><line x1=\"2\" x2=\"5\" y1=\"12\" y2=\"12\"/><line x1=\"19\" x2=\"22\" y1=\"12\" y2=\"12\"/><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"5\"/><line x1=\"12\" x2=\"12\" y1=\"19\" y2=\"22\"/><circle cx=\"12\" cy=\"12\" r=\"7\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg></button></div><p class=\"ds-sky-time\">10:00–12:00</p><p class=\"ds-sky-line\">Best time to go outside</p><p class=\"ds-sky-plan\">09:00–18:00 · 2 h · Active</p><div class=\"ds-sky-actions\"><button class=\"ds-sky-solid\">Use my location</button><button class=\"ds-sky-outline\">Search city</button></div></header>",
+      "css": ".ds-sky{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;background:var(--sky,#1d5fd6);color:var(--sky-foreground,#fff);padding:12px 16px 32px;max-width:420px}.ds-sky-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.ds-sky-place,.ds-sky-icon{display:inline-flex;align-items:center;gap:6px;height:44px;border:0;background:transparent;color:inherit;font:inherit;font-size:18px;font-weight:600;border-radius:9999px;padding:0 12px;margin-left:-12px;cursor:pointer;transition:background .15s}.ds-sky-icon{width:44px;justify-content:center;padding:0;margin:0}.ds-sky-place:hover,.ds-sky-icon:hover{background:rgb(255 255 255/.15)}.ds-sky-place:focus-visible,.ds-sky-icon:focus-visible,.ds-sky-solid:focus-visible,.ds-sky-outline:focus-visible{outline:2px solid var(--ring,#1d5fd6);outline-offset:2px}.ds-sky-time{margin:0;font-size:clamp(2.25rem,12.5vw,3.75rem);line-height:1;font-weight:600;letter-spacing:-.025em;font-variant-numeric:tabular-nums;white-space:nowrap;animation:ds-sky-settle .5s ease-out}@keyframes ds-sky-settle{from{opacity:0;transform:translateY(4px)}}@media (prefers-reduced-motion:reduce){.ds-sky-time{animation:none}}.ds-sky-line{margin:4px 0 0;font-size:18px}.ds-sky-plan{margin:4px 0 16px;font-size:14px;color:var(--sky-muted,#e3edff);font-variant-numeric:tabular-nums}.ds-sky-actions{display:flex;flex-wrap:wrap;gap:8px}.ds-sky-solid,.ds-sky-outline{height:44px;padding:0 20px;border-radius:9999px;font:inherit;font-size:16px;font-weight:500;cursor:pointer;transition:background .15s}.ds-sky-solid{background:#fff;color:var(--sky,#1d5fd6);border:1px solid transparent}.ds-sky-solid:hover{background:rgb(255 255 255/.9)}.ds-sky-outline{background:transparent;color:#fff;border:1px solid rgb(255 255 255/.6)}.ds-sky-outline:hover{background:rgb(255 255 255/.15)}"
+    },
+    {
+      "name": "Hourly Strip",
+      "kind": "custom",
+      "refersTo": "hour-pill-good",
+      "description": "Hour columns (52px minimum, stretching to fill wide rows) with icon-only verdict pills, the free-time wash and the best-window ring.",
+      "html": "<div class=\"ds-strip\"><div class=\"ds-band\"></div><div class=\"ds-ring\"></div><button class=\"ds-hour\"><span class=\"ds-hour-h\">Now</span><span class=\"ds-pill ds-pill-good\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg></span><span class=\"ds-hour-uv\">UV 2</span></button><button class=\"ds-hour ds-hour-best\"><span class=\"ds-hour-h\">11</span><span class=\"ds-pill ds-pill-good\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg></span><span class=\"ds-hour-uv\">UV 3</span></button><button class=\"ds-hour ds-hour-best\"><span class=\"ds-hour-h\">12</span><span class=\"ds-pill ds-pill-ok\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"M12 8v4\"/><path d=\"M12 16h.01\"/></svg></span><span class=\"ds-hour-uv\">UV 6</span></button><button class=\"ds-hour\"><span class=\"ds-hour-h\">13</span><span class=\"ds-pill ds-pill-bad\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m15 9-6 6\"/><path d=\"m9 9 6 6\"/></svg></span><span class=\"ds-hour-uv\">UV 8</span></button><button class=\"ds-hour\"><span class=\"ds-hour-h\">14</span><span class=\"ds-pill ds-pill-ok\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"M12 8v4\"/><path d=\"M12 16h.01\"/></svg></span><span class=\"ds-hour-uv\">UV 7</span></button><button class=\"ds-hour\"><span class=\"ds-hour-h\">20</span><span class=\"ds-pill ds-pill-dark\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg></span><span class=\"ds-hour-uv ds-muted\">–</span></button></div>",
+      "css": ".ds-strip{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;position:relative;display:flex;width:312px;color:var(--foreground,#0f172a)}.ds-band{position:absolute;top:0;bottom:0;left:0;width:260px;border-radius:18px;background:var(--plan,rgb(29 95 214/.1));pointer-events:none}.ds-ring{position:absolute;top:0;bottom:0;left:52px;width:104px;z-index:2;border-radius:18px;box-shadow:inset 0 0 0 2px var(--foreground,#0f172a);pointer-events:none;transition:left .3s ease-out,width .3s ease-out}.ds-hour{position:relative;z-index:1;width:52px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 0;border:0;background:transparent;border-radius:18px;font:inherit;color:inherit;cursor:pointer}.ds-hour:focus-visible{outline:2px solid var(--ring,#1d5fd6);outline-offset:-2px}.ds-hour-h{font-size:12px;color:var(--muted-foreground,#475569);font-variant-numeric:tabular-nums}.ds-hour-best .ds-hour-h{font-weight:600;color:var(--foreground,#0f172a)}.ds-pill{display:grid;place-items:center;width:36px;height:56px;border-radius:9999px;box-shadow:inset 0 0 0 1px rgb(0 0 0/.1);transition:transform .15s ease-out}.ds-hour:active .ds-pill{transform:scale(.94)}.ds-pill svg{stroke-width:2.5}.ds-pill-good{background:var(--verdict-good,#0ca30c);color:var(--verdict-good-ink,#fff)}.ds-pill-ok{background:var(--verdict-ok,#fab219);color:var(--verdict-ok-ink,#0b0b0b)}.ds-pill-bad{background:var(--verdict-bad,#d03b3b);color:var(--verdict-bad-ink,#fff)}.ds-pill-dark{box-shadow:none;border:1px dashed color-mix(in srgb,var(--muted-foreground,#475569) 50%,transparent);color:var(--muted-foreground,#475569)}.ds-hour-uv{font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}.ds-muted{color:var(--muted-foreground,#475569);font-weight:400}@media (prefers-reduced-motion:reduce){.ds-ring{transition:none}}"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "input",
+      "refersTo": "segmented-item-selected",
+      "description": "Single-choice control for duration and activity; the selected segment is a raised card chip.",
+      "html": "<div class=\"ds-seg\" role=\"radiogroup\" aria-label=\"How long\"><button class=\"ds-seg-item\" role=\"radio\" aria-checked=\"false\">30 min</button><button class=\"ds-seg-item\" role=\"radio\" aria-checked=\"true\">1 h</button><button class=\"ds-seg-item\" role=\"radio\" aria-checked=\"false\">2 h</button><button class=\"ds-seg-item\" role=\"radio\" aria-checked=\"false\">3 h</button></div>",
+      "css": ".ds-seg{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;padding:4px;border-radius:14px;background:var(--muted,#eef4fc);max-width:340px}.ds-seg-item{height:40px;padding:0 8px;border:0;border-radius:10px;background:transparent;color:var(--muted-foreground,#475569);font:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:color .15s ease-out,background-color .15s ease-out,box-shadow .15s ease-out,transform .15s ease-out}.ds-seg-item:hover{color:var(--foreground,#0f172a)}.ds-seg-item:active{transform:scale(.97)}.ds-seg-item:focus-visible{outline:2px solid var(--ring,#1d5fd6);outline-offset:2px}.ds-seg-item[aria-checked=\"true\"]{background:var(--card,#fff);color:var(--foreground,#0f172a);box-shadow:0 1px 3px 0 rgb(0 0 0/.1),0 1px 2px -1px rgb(0 0 0/.1)}"
+    },
+    {
+      "name": "Hour Select",
+      "kind": "input",
+      "refersTo": "select-trigger",
+      "description": "Whole-hour select, used in pairs with an arrow for the free-time range.",
+      "html": "<div class=\"ds-range\"><button class=\"ds-select\">09:00<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></button><svg class=\"ds-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg><button class=\"ds-select\">18:00<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></button></div>",
+      "css": ".ds-range{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;max-width:340px}.ds-arrow{color:var(--muted-foreground,#475569)}.ds-select{display:flex;align-items:center;justify-content:space-between;height:44px;padding:0 12px;border:1px solid var(--input,#cdd9e8);border-radius:14px;background:transparent;color:var(--foreground,#0f172a);font:inherit;font-size:16px;font-variant-numeric:tabular-nums;cursor:pointer;transition:border-color .15s,box-shadow .15s}.ds-select svg{opacity:.5}.ds-select:focus-visible{outline:none;border-color:var(--ring,#1d5fd6);box-shadow:0 0 0 3px color-mix(in srgb,var(--ring,#1d5fd6) 50%,transparent)}"
+    },
+    {
+      "name": "Checklist Item",
+      "kind": "custom",
+      "refersTo": "checklist-icon-chip",
+      "description": "What-to-take row: 40px Sky Mist icon chip with a name and a one-line detail.",
+      "html": "<ul class=\"ds-check\"><li><span class=\"ds-chip\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 3h.01\"/><path d=\"M7 5h.01\"/><path d=\"M11 7h.01\"/><path d=\"M3 7h.01\"/><path d=\"M7 9h.01\"/><path d=\"M3 11h.01\"/><rect width=\"4\" height=\"4\" x=\"15\" y=\"5\"/><path d=\"m19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2\"/><path d=\"m13 14 8-2\"/><path d=\"m13 19 8-2\"/></svg></span><span class=\"ds-check-text\"><span class=\"ds-check-name\">Sunscreen</span><span class=\"ds-check-detail\">UV 5 at the start of your window</span></span></li></ul>",
+      "css": ".ds-check{font-family:'Geist Variable',ui-sans-serif,system-ui,sans-serif;list-style:none;margin:0;padding:0;display:grid;gap:12px;color:var(--foreground,#0f172a)}.ds-check li{display:flex;align-items:center;gap:12px}.ds-chip{display:grid;place-items:center;width:40px;height:40px;flex-shrink:0;border-radius:9999px;background:var(--accent,#e3edfc);color:var(--primary,#1d5fd6)}.ds-check-text{display:flex;flex-direction:column}.ds-check-name{font-weight:500;font-size:16px}.ds-check-detail{font-size:14px;color:var(--muted-foreground,#475569)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Weather App That Answers",
+    "overview": "UV GO uses the category standard and plays it straight: a flat sky-blue field holds the place and the answer, and soft white modules sit under it on a pale sky ground. Apple Weather and Google Weather set the craft bar. Nothing in the system is there to be different. Everything is there to be read in a few seconds, one-handed, in bright light.\n\nThe answer is the hero. The best window is set large in tabular numerals on the sky field, and the verdict card overlaps the field's lower edge so the answer and its reason read as one unit. Colour does jobs only. Sky blue marks place, selection and free time. Green, amber and red mark verdicts, and they always come with an icon and a label. Every other surface is a quiet neutral, so the status colours stand out.\n\nNight mode keeps the same structure: the field goes navy, the ground near-black and the cards slate. The verdict fills stay exactly the same, and only their tints and text colours change for the dark surface.",
+    "keyCharacteristics": [
+      "A flat sky field with white type, and a 40px card overlap at its bottom edge.",
+      "Borderless rounded modules (22px) lifted by one soft two-layer shadow.",
+      "One typeface (Geist) with tabular numerals wherever a number can change.",
+      "A fixed three-step verdict scale, always shown as icon plus label.",
+      "One authored motion moment: the answer fades in and settles 4px upward when it changes."
+    ],
+    "rules": [
+      {
+        "name": "The Colour Does Jobs Rule",
+        "body": "Blue means place, selection, focus or free time. Green, amber and red mean a verdict. No other hue appears, and no colour is decorative.",
+        "section": "colors"
+      },
+      {
+        "name": "The Fixed Scale Rule",
+        "body": "Verdict fills never change between themes. Theme changes only move the tints and text colours that sit on surfaces.",
+        "section": "colors"
+      },
+      {
+        "name": "The Fills Are Marks Rule",
+        "body": "Solid verdict fills carry an icon, never text. White on Go Green is 3.35:1, which is enough for a graphic but not for words. Text about a verdict uses the tint/text pair.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Any number that can change (times, UV, scores, durations) is set with `tabular-nums`, so the layout never shifts when the answer updates.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "All headings and labels are sentence case at normal tracking. The system has no uppercase or letter-spaced label style.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Lift Rule",
+        "body": "Cards have a shadow and no border. Inside cards, separation comes from hairline dividers and tonal fills, never from nested shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do pair every verdict colour with its icon (circle-check, shield-alert, circle-x) and a text label, or an accessible label where space allows only the mark.",
+      "Do use verdict tints with verdict text for any words about a verdict, and solid fills only for icon marks.",
+      "Do set every changing number in tabular numerals.",
+      "Do keep tap targets at 44px or more, and give every focusable element the 2px `primary` ring with a 2px offset.",
+      "Do keep motion to the answer's 500ms fade-and-settle and short 150ms press feedback, and remove all of it under reduced motion."
+    ],
+    "donts": [
+      "Don't show a verdict by colour alone.",
+      "Don't put text on a solid verdict fill. White on Go Green is 3.35:1.",
+      "Don't change the verdict fills per theme, or use green, amber or red for anything other than a verdict.",
+      "Don't add borders to cards or stack shadows inside them. Use one lift, hairline dividers and tonal fills.",
+      "Don't introduce a second typeface or an uppercase, letter-spaced label style."
+    ]
+  }
+}

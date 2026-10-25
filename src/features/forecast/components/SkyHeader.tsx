@@ -2,9 +2,12 @@ import { ChevronDown, LoaderCircle, LocateFixed, MapPin, RefreshCw, Search } fro
 import { ThemeToggle } from '@/components/shared/ThemeToggle'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
+import type { ReactNode } from 'react'
 import type { DayPlan, Place, PlanSettings } from '@/domain/types'
 import { activityLabels } from '@/features/planner/options'
+import { pageContainer } from '@/lib/layout'
 import { formatDuration, formatHour, formatHourRange } from '@/lib/time'
+import { cn } from '@/lib/utils'
 
 export type HeadlineState =
   | { kind: 'no-place' }
@@ -19,6 +22,8 @@ interface SkyHeaderProps {
   locating: boolean
   onOpenSearch: () => void
   onLocate: () => void
+  /** Shown beside the headline on wide screens (the verdict card). */
+  aside?: ReactNode
 }
 
 const onSky = 'text-sky-foreground hover:bg-white/15 hover:text-sky-foreground'
@@ -121,11 +126,11 @@ function Headline({
 }
 
 export function SkyHeader(props: SkyHeaderProps) {
-  const { place, onOpenSearch, onLocate, locating } = props
+  const { place, onOpenSearch, onLocate, locating, aside } = props
 
   return (
     <header className="bg-sky pt-[env(safe-area-inset-top)] text-sky-foreground">
-      <div className="mx-auto flex max-w-3xl flex-col gap-6 px-4 pt-3 pb-16 sm:px-6">
+      <div className={cn(pageContainer, 'flex flex-col gap-6 pt-3 pb-16 lg:pb-20')}>
         <div className="flex items-center justify-between gap-2">
           <Button
             variant="ghost"
@@ -157,7 +162,10 @@ export function SkyHeader(props: SkyHeaderProps) {
             <ThemeToggle className={onSky} />
           </div>
         </div>
-        <Headline {...props} />
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-center lg:gap-12">
+          <Headline {...props} />
+          {aside && <div className="hidden lg:block">{aside}</div>}
+        </div>
       </div>
     </header>
   )

@@ -34,7 +34,7 @@ It does not show the weather; it makes the decision. A transparent, rule-based s
 - Result card: best window, verdict, one-line reason, score. Two non-overlapping runner-up windows.
 - Day timeline: each hour coloured by verdict, free time highlighted, dark and past hours excluded; tapping an hour shows its score breakdown.
 - "What to take" checklist: sunscreen, hat and sunglasses, rain jacket, water, warm layer.
-- All rules and thresholds live in `src/config/rules.ts`.
+- All rules and thresholds live in `src/config/rules.ts`, and the values follow the brief exactly. A "Good" window can still carry a sunscreen reason at UV 3–5. That is intended (confirmed by the user, 2026-10-25): Good means go, and the reason and checklist say what to bring.
 - Remembers the last place, inputs and up to five recent cities in localStorage.
 - Out of scope: login, backend, database, payments, notifications, native apps.
 

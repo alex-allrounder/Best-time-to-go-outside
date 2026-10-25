@@ -49,7 +49,7 @@ export function PlannerCard({ settings, onChange, onReset, className }: PlannerC
         )
       }
     >
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)_minmax(0,1.3fr)] lg:gap-6">
         <Field label="Free time">
           <FreeTimeRange
             value={settings.freeTime}

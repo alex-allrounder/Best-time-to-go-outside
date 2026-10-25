@@ -1,6 +1,14 @@
+import { pageContainer } from '@/lib/layout'
+import { cn } from '@/lib/utils'
+
 export function Footer() {
   return (
-    <footer className="mx-auto w-full max-w-3xl px-4 pt-2 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] text-xs text-muted-foreground sm:px-6">
+    <footer
+      className={cn(
+        pageContainer,
+        'pt-2 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] text-xs text-muted-foreground',
+      )}
+    >
       <p>
         <span className="font-semibold text-foreground">UV GO</span> · Weather data by{' '}
         <a
