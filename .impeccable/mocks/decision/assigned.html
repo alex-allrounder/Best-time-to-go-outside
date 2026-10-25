@@ -1,67 +1,242 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=390">
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{width:390px;height:844px;overflow:hidden}
-body{background:#EEF0EE;color:#1E2321;font-family:Geist,system-ui,sans-serif;font-size:15px}
-.mono{font-family:'Geist Mono',monospace;font-variant-numeric:tabular-nums}
-header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid #C9CFCB}
-.logo{font-weight:700;letter-spacing:.08em;font-size:15px}
-.logo b{color:#9A6B2F}
-.icon{width:32px;height:32px;border:1px solid #C9CFCB;border-radius:8px}
-.summary{display:flex;gap:6px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid #C9CFCB;font-size:13px}
-.chip{border:1px solid #C9CFCB;border-radius:999px;padding:5px 10px;background:#F6F7F6}
-.chip.plan{border-color:#9A6B2F;color:#7A5222}
-.answer{padding:20px 16px 14px}
-.k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5B6461}
-.time{font-size:48px;font-weight:600;letter-spacing:-.03em;line-height:1.05;margin:6px 0 10px}
-.verdict{display:inline-flex;align-items:center;gap:8px;background:#2F8F5B;color:#fff;padding:6px 12px;border-radius:6px;font-weight:600;font-size:14px}
-.reason{margin-top:10px;font-size:16px}
-.score{float:right;font-size:13px;color:#5B6461;margin-top:14px}
-.dial{position:relative;height:250px;margin:4px 16px 0;border-top:1px solid #C9CFCB}
-svg{display:block;margin:8px auto 0}
-.legend{display:flex;gap:14px;justify-content:center;font-size:12px;color:#5B6461;margin-top:4px}
-.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
-.alt{margin:10px 16px 0;border-top:1px solid #C9CFCB;padding-top:10px}
-.row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #DDE1DE;font-size:14px}
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px}
-</style></head><body>
-<header><div class="logo">UV <b>GO</b></div><div class="icon"></div></header>
-<div class="summary"><span class="chip">Lahore, Punjab</span><span class="chip plan mono">13:00–19:00</span><span class="chip">2 h · Relaxed</span></div>
-<section class="answer">
-  <div class="k">Best time today</div>
-  <div class="time mono">16:00–18:00</div>
-  <span class="verdict">● Good</span><span class="score mono">score 1.0</span>
-  <p class="reason">UV 3, use sunscreen</p>
-</section>
-<section class="dial">
-<svg width="358" height="196" viewBox="0 0 358 196">
-  <g fill="none" stroke-width="40">
-    <path d="M29 179 A150 150 0 0 1 46 110" stroke="#2F8F5B"/>
-    <path d="M46 110 A150 150 0 0 1 89 59" stroke="#2F8F5B"/>
-    <path d="M89 59 A150 150 0 0 1 148 32" stroke="#E2A31B"/>
-    <path d="M148 32 A150 150 0 0 1 210 32" stroke="#C8432F"/>
-    <path d="M210 32 A150 150 0 0 1 269 59" stroke="#C8432F"/>
-    <path d="M269 59 A150 150 0 0 1 312 110" stroke="#E2A31B"/>
-    <path d="M312 110 A150 150 0 0 1 329 179" stroke="#2F8F5B"/>
-  </g>
-  <g stroke="#EEF0EE" stroke-width="2">
-    <line x1="46" y1="110" x2="10" y2="92"/><line x1="89" y1="59" x2="65" y2="27"/><line x1="148" y1="32" x2="140" y2="-6"/><line x1="210" y1="32" x2="218" y2="-6"/><line x1="269" y1="59" x2="293" y2="27"/><line x1="312" y1="110" x2="348" y2="92"/>
-  </g>
-  <path d="M210 32 A150 150 0 0 1 329 179" fill="none" stroke="#9A6B2F" stroke-width="3" transform="translate(0,-26) scale(1,1)"/>
-  <path d="M269 59 A150 150 0 0 1 329 179" fill="none" stroke="#1E2321" stroke-width="3" stroke-dasharray="0" opacity=".0"/>
-  <line x1="179" y1="179" x2="300" y2="96" stroke="#3B4441" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="179" cy="179" r="6" fill="#1E2321"/>
-  <g font-family="Geist Mono" font-size="11" fill="#5B6461" text-anchor="middle">
-    <text x="18" y="194">06</text><text x="179" y="72">12</text><text x="340" y="194">18</text>
-  </g>
-</svg>
-<div class="legend"><span><i class="sw" style="background:#2F8F5B"></i>Good</span><span><i class="sw" style="background:#E2A31B"></i>OK with protection</span><span><i class="sw" style="background:#C8432F"></i>Not recommended</span></div>
-</section>
-<section class="alt">
-  <div class="k">Other options</div>
-  <div class="row"><span><i class="dot" style="background:#2F8F5B"></i><span class="mono">07:00–09:00</span></span><span>Low UV, dry</span></div>
-  <div class="row"><span><i class="dot" style="background:#E2A31B"></i><span class="mono">13:00–15:00</span></span><span>UV 6, cover up</span></div>
-</section>
-</body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=390" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 390px;
+        height: 844px;
+        overflow: hidden;
+      }
+      body {
+        background: #eef0ee;
+        color: #1e2321;
+        font-family: Geist, system-ui, sans-serif;
+        font-size: 15px;
+      }
+      .mono {
+        font-family: 'Geist Mono', monospace;
+        font-variant-numeric: tabular-nums;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 16px;
+        border-bottom: 1px solid #c9cfcb;
+      }
+      .logo {
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        font-size: 15px;
+      }
+      .logo b {
+        color: #9a6b2f;
+      }
+      .icon {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #c9cfcb;
+        border-radius: 8px;
+      }
+      .summary {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        border-bottom: 1px solid #c9cfcb;
+        font-size: 13px;
+      }
+      .chip {
+        border: 1px solid #c9cfcb;
+        border-radius: 999px;
+        padding: 5px 10px;
+        background: #f6f7f6;
+      }
+      .chip.plan {
+        border-color: #9a6b2f;
+        color: #7a5222;
+      }
+      .answer {
+        padding: 20px 16px 14px;
+      }
+      .k {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #5b6461;
+      }
+      .time {
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+        margin: 6px 0 10px;
+      }
+      .verdict {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #2f8f5b;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .reason {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+      .score {
+        float: right;
+        font-size: 13px;
+        color: #5b6461;
+        margin-top: 14px;
+      }
+      .dial {
+        position: relative;
+        height: 250px;
+        margin: 4px 16px 0;
+        border-top: 1px solid #c9cfcb;
+      }
+      svg {
+        display: block;
+        margin: 8px auto 0;
+      }
+      .legend {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        font-size: 12px;
+        color: #5b6461;
+        margin-top: 4px;
+      }
+      .sw {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        margin-right: 5px;
+        vertical-align: -1px;
+      }
+      .alt {
+        margin: 10px 16px 0;
+        border-top: 1px solid #c9cfcb;
+        padding-top: 10px;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        padding: 9px 0;
+        border-bottom: 1px solid #dde1de;
+        font-size: 14px;
+      }
+      .dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">UV <b>GO</b></div>
+      <div class="icon"></div>
+    </header>
+    <div class="summary">
+      <span class="chip">Lahore, Punjab</span><span class="chip plan mono">13:00–19:00</span
+      ><span class="chip">2 h · Relaxed</span>
+    </div>
+    <section class="answer">
+      <div class="k">Best time today</div>
+      <div class="time mono">16:00–18:00</div>
+      <span class="verdict">● Good</span><span class="score mono">score 1.0</span>
+      <p class="reason">UV 3, use sunscreen</p>
+    </section>
+    <section class="dial">
+      <svg width="358" height="196" viewBox="0 0 358 196">
+        <g fill="none" stroke-width="40">
+          <path d="M29 179 A150 150 0 0 1 46 110" stroke="#2F8F5B" />
+          <path d="M46 110 A150 150 0 0 1 89 59" stroke="#2F8F5B" />
+          <path d="M89 59 A150 150 0 0 1 148 32" stroke="#E2A31B" />
+          <path d="M148 32 A150 150 0 0 1 210 32" stroke="#C8432F" />
+          <path d="M210 32 A150 150 0 0 1 269 59" stroke="#C8432F" />
+          <path d="M269 59 A150 150 0 0 1 312 110" stroke="#E2A31B" />
+          <path d="M312 110 A150 150 0 0 1 329 179" stroke="#2F8F5B" />
+        </g>
+        <g stroke="#EEF0EE" stroke-width="2">
+          <line x1="46" y1="110" x2="10" y2="92" />
+          <line x1="89" y1="59" x2="65" y2="27" />
+          <line x1="148" y1="32" x2="140" y2="-6" />
+          <line x1="210" y1="32" x2="218" y2="-6" />
+          <line x1="269" y1="59" x2="293" y2="27" />
+          <line x1="312" y1="110" x2="348" y2="92" />
+        </g>
+        <path
+          d="M210 32 A150 150 0 0 1 329 179"
+          fill="none"
+          stroke="#9A6B2F"
+          stroke-width="3"
+          transform="translate(0,-26) scale(1,1)"
+        />
+        <path
+          d="M269 59 A150 150 0 0 1 329 179"
+          fill="none"
+          stroke="#1E2321"
+          stroke-width="3"
+          stroke-dasharray="0"
+          opacity=".0"
+        />
+        <line
+          x1="179"
+          y1="179"
+          x2="300"
+          y2="96"
+          stroke="#3B4441"
+          stroke-width="3"
+          stroke-linecap="round"
+        />
+        <circle cx="179" cy="179" r="6" fill="#1E2321" />
+        <g font-family="Geist Mono" font-size="11" fill="#5B6461" text-anchor="middle">
+          <text x="18" y="194">06</text>
+          <text x="179" y="72">12</text>
+          <text x="340" y="194">18</text>
+        </g>
+      </svg>
+      <div class="legend">
+        <span><i class="sw" style="background: #2f8f5b"></i>Good</span
+        ><span><i class="sw" style="background: #e2a31b"></i>OK with protection</span
+        ><span><i class="sw" style="background: #c8432f"></i>Not recommended</span>
+      </div>
+    </section>
+    <section class="alt">
+      <div class="k">Other options</div>
+      <div class="row">
+        <span
+          ><i class="dot" style="background: #2f8f5b"></i
+          ><span class="mono">07:00–09:00</span></span
+        ><span>Low UV, dry</span>
+      </div>
+      <div class="row">
+        <span
+          ><i class="dot" style="background: #e2a31b"></i
+          ><span class="mono">13:00–15:00</span></span
+        ><span>UV 6, cover up</span>
+      </div>
+    </section>
+  </body>
+</html>

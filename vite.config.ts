@@ -12,6 +12,10 @@ export default defineConfig({
       '@': path.resolve(import.meta.dirname, './src'),
     },
   },
+  build: {
+    // Single ~540 kB chunk (~170 kB gzip), mostly react-dom, TanStack Query and Radix/vaul.
+    chunkSizeWarningLimit: 600,
+  },
   test: {
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],

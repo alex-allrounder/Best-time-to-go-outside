@@ -1,11 +1,11 @@
 import { useCallback } from 'react'
-import { z } from 'zod'
+import { z } from 'zod/mini'
 import { appConfig } from '@/config/app.config'
 import type { Place } from '@/domain/types'
 import { placeSchema } from '@/features/location/placeSchema'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 
-const savedPlaceSchema = placeSchema.nullable()
+const savedPlaceSchema = z.nullable(placeSchema)
 const recentPlacesSchema = z.array(placeSchema)
 const NO_PLACES: Place[] = []
 

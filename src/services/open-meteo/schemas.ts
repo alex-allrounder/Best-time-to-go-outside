@@ -1,6 +1,6 @@
-import { z } from 'zod'
+import { z } from 'zod/mini'
 
-const series = z.array(z.number().nullable())
+const series = z.array(z.nullable(z.number()))
 
 export const forecastResponseSchema = z.object({
   timezone: z.string(),
@@ -22,13 +22,13 @@ export const geocodingResultSchema = z.object({
   name: z.string(),
   latitude: z.number(),
   longitude: z.number(),
-  country: z.string().optional(),
-  admin1: z.string().optional(),
+  country: z.optional(z.string()),
+  admin1: z.optional(z.string()),
 })
 
 export type GeocodingResult = z.infer<typeof geocodingResultSchema>
 
 // The API omits `results` entirely when nothing matches.
 export const geocodingResponseSchema = z.object({
-  results: z.array(geocodingResultSchema).default([]),
+  results: z._default(z.array(geocodingResultSchema), []),
 })

@@ -10,16 +10,38 @@
       "lineage": "garden and wall sundials: engraved hour lines, a gnomon's shadow, a motto plate",
       "thesis": "Today is a dial that only works in daylight; the shadow points to now and the best window is the lit sector.",
       "palette": ["#EEF0EE", "#1E2321", "#9A6B2F", "#2F8F5B", "#E2A31B", "#C8432F"],
-      "materials": ["cut limestone and slate", "engraved hairline hour marks", "cast bronze reserved for your plan"],
+      "materials": [
+        "cut limestone and slate",
+        "engraved hairline hour marks",
+        "cast bronze reserved for your plan"
+      ],
       "viewport": "Header and place line, then the answer card (window, verdict, reason) above a half-dial of today's daylight hours coloured by verdict, the free-time arc rimmed in bronze and a shadow hand at now; planner controls and checklist follow.",
       "risk": "A dial is less scannable than a strip at 13+ hours; it needs a linear fallback list and generous tap wedges to stay usable.",
       "raised": [
-        { "from": "challenger-ikeda", "raise": "Strict colour budget: the shell is two stone inks; colour appears only as verdict or as the bronze plan mark." },
-        { "from": "challenger-annual", "raise": "One family throughout (Geist + Geist Mono numerals) on a 1px hairline grid; no shadowed cards." },
-        { "from": "challenger-rail", "raise": "A printed state vocabulary for hour marks: hairline at rest, filled selected, struck past, hollow dark, bracketed on focus." },
-        { "from": "challenger-orienteering", "raise": "Bronze is the course layer: used only for your free time and chosen window, never decoration." },
-        { "from": "challenger-feed", "raise": "The answer owns the first viewport; inputs collapse to one editable summary line above it." },
-        { "from": "challenger-zoo", "raise": "Flat unmodulated fields only: no gradients, glass or glow anywhere." }
+        {
+          "from": "challenger-ikeda",
+          "raise": "Strict colour budget: the shell is two stone inks; colour appears only as verdict or as the bronze plan mark."
+        },
+        {
+          "from": "challenger-annual",
+          "raise": "One family throughout (Geist + Geist Mono numerals) on a 1px hairline grid; no shadowed cards."
+        },
+        {
+          "from": "challenger-rail",
+          "raise": "A printed state vocabulary for hour marks: hairline at rest, filled selected, struck past, hollow dark, bracketed on focus."
+        },
+        {
+          "from": "challenger-orienteering",
+          "raise": "Bronze is the course layer: used only for your free time and chosen window, never decoration."
+        },
+        {
+          "from": "challenger-feed",
+          "raise": "The answer owns the first viewport; inputs collapse to one editable summary line above it."
+        },
+        {
+          "from": "challenger-zoo",
+          "raise": "Flat unmodulated fields only: no gradients, glass or glow anywhere."
+        }
       ],
       "html": ".impeccable/mocks/decision/assigned.html",
       "htmlFrame": "390x844"
@@ -32,7 +54,11 @@
       "lineage": "beach lifeguard flag poles and chalked surf-condition boards",
       "thesis": "The verdict is a flag on a pole: everyone already knows green, yellow and red from the beach.",
       "palette": ["#FFFFFF", "#0B2545", "#1E9E4A", "#FFD100", "#D7262E"],
-      "materials": ["flat nylon flag colour", "chalkboard condition board", "painted tower signage"],
+      "materials": [
+        "flat nylon flag colour",
+        "chalkboard condition board",
+        "painted tower signage"
+      ],
       "viewport": "A tall flag-field verdict banner owns the top third with the window time on it, then the hour strip as a row of small pennants and the planner below.",
       "risk": "Familiar and literal; it is where most runs in this category land, and flag colour at page scale fights the timeline's own colour.",
       "html": ".impeccable/mocks/decision/model-pick.html",

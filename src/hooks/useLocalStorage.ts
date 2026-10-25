@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
-import type { z } from 'zod'
+import type { z } from 'zod/mini'
 
-function read<T>(key: string, schema: z.ZodType<T>, fallback: T): T {
+function read<T>(key: string, schema: z.ZodMiniType<T>, fallback: T): T {
   try {
     const raw = window.localStorage.getItem(key)
     if (raw === null) return fallback
@@ -17,7 +17,7 @@ function read<T>(key: string, schema: z.ZodType<T>, fallback: T): T {
  * useState that persists to localStorage. Stored values are validated with `schema`,
  * so an old or hand-edited entry falls back to `fallback` instead of crashing the app.
  */
-export function useLocalStorage<T>(key: string, schema: z.ZodType<T>, fallback: T) {
+export function useLocalStorage<T>(key: string, schema: z.ZodMiniType<T>, fallback: T) {
   const [value, setValue] = useState<T>(() => read(key, schema, fallback))
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import type { z } from 'zod'
+import type { z } from 'zod/mini'
 
 export class ApiError extends Error {
   readonly status: number | null
@@ -21,7 +21,7 @@ export function buildUrl(base: string, params: Record<string, QueryValue>): stri
 /** GET + validate. Open-Meteo reports errors as `{ error: true, reason }`. */
 export async function getJson<T>(
   url: string,
-  schema: z.ZodType<T>,
+  schema: z.ZodMiniType<T>,
   signal?: AbortSignal,
 ): Promise<T> {
   let response: Response
