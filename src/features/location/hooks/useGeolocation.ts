@@ -4,17 +4,19 @@ import type { Place } from '@/domain/types'
 
 export type GeolocationStatus = 'idle' | 'locating' | 'error'
 
+export type GeolocationErrorCode = 'unsupported' | 'denied' | 'unavailable' | 'timeout'
+
 export class GeolocationError extends Error {
-  constructor(
-    message: string,
-    readonly code: 'unsupported' | 'denied' | 'unavailable' | 'timeout',
-  ) {
+  readonly code: GeolocationErrorCode
+
+  constructor(message: string, code: GeolocationErrorCode) {
     super(message)
     this.name = 'GeolocationError'
+    this.code = code
   }
 }
 
-const MESSAGES: Record<number, [string, GeolocationError['code']]> = {
+const MESSAGES: Record<number, [string, GeolocationErrorCode]> = {
   1: ['Location access was denied. Search for a city instead.', 'denied'],
   2: ['Your location could not be found. Search for a city instead.', 'unavailable'],
   3: ['Finding your location took too long. Try again or search for a city.', 'timeout'],

@@ -7,7 +7,10 @@ import geocodingLahore from './fixtures/geocoding-lahore.json'
 
 function mockFetch(body: unknown, status = 200) {
   const fetchMock = vi.fn<typeof fetch>().mockResolvedValue(
-    new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } }),
+    new Response(JSON.stringify(body), {
+      status,
+      headers: { 'Content-Type': 'application/json' },
+    }),
   )
   vi.stubGlobal('fetch', fetchMock)
   return fetchMock

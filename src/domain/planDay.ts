@@ -60,8 +60,12 @@ export function scoreHours(
 
 function explainEmpty(hours: readonly ScoredHour[]): EmptyReason {
   const free = hours.filter((h) => h.inFreeTime)
-  if (free.length > 0 && free.every((h) => h.status === 'past')) return 'already-passed'
-  if (free.filter((h) => h.status !== 'past').every((h) => h.status === 'dark')) return 'no-daylight'
+  const upcoming = free.filter((h) => h.status !== 'past')
+  if (free.length > 0 && upcoming.length === 0) return 'already-passed'
+  if (upcoming.every((h) => h.status === 'dark')) {
+    // Daylight existed earlier in the free time but the sun has set since.
+    return free.some((h) => h.status === 'past' && h.isDay) ? 'no-daylight-left' : 'no-daylight'
+  }
   return 'no-continuous-window'
 }
 

@@ -121,9 +121,13 @@ describe('planDay', () => {
     })
 
     it('flags free time with no daylight', () => {
-      expect(plan({}, { freeTime: { startHour: 21, endHour: 24 } }).emptyReason).toBe(
-        'no-daylight',
-      )
+      expect(plan({}, { freeTime: { startHour: 21, endHour: 24 } }).emptyReason).toBe('no-daylight')
+    })
+
+    it('flags free time whose daylight has already gone', () => {
+      // Free 8–22, now 21: daylight hours 8–20 are past, 21 is dark.
+      const result = plan({}, { freeTime: { startHour: 8, endHour: 22 } }, 21)
+      expect(result.emptyReason).toBe('no-daylight-left')
     })
 
     it('flags daylight that is too short for the duration', () => {

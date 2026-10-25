@@ -25,3 +25,4 @@ dist-ssr
 
 # Impeccable session state
 .impeccable/questions
+.impeccable/review

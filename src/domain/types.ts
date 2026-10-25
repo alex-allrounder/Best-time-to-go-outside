@@ -101,6 +101,7 @@ export type EmptyReason =
   | 'free-time-too-short'
   | 'already-passed'
   | 'no-daylight'
+  | 'no-daylight-left'
   | 'no-continuous-window'
 
 export interface DayPlan {

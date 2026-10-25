@@ -2,9 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <meta
+      name="description"
+      content="UV GO finds the best time to go outside today within your free time, from the UV index and weather forecast."
+    />
+    <meta name="theme-color" content="#1d5fd6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#132c57" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>uv-go</title>
+    <script>
+      // Apply the saved or system theme before first paint (mirrors ThemeProvider).
+      try {
+        var t = localStorage.getItem('uvgo:theme')
+        if (t === 'dark' || (t !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches))
+          document.documentElement.classList.add('dark')
+      } catch (e) {}
+    </script>
+    <title>UV GO · Best time to go outside</title>
   </head>
   <body>
     <div id="root"></div>

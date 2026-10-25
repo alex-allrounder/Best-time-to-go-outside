@@ -11,3 +11,10 @@ export function formatHourRange(startHour: number, endHour: number): string {
 export function hourAtOffset(utcOffsetSeconds: number, nowMs: number = Date.now()): number {
   return new Date(nowMs + utcOffsetSeconds * 1000).getUTCHours()
 }
+
+/** 30 → "30 min", 60 → "1 hour", 120 → "2 hours". */
+export function formatDuration(minutes: number): string {
+  if (minutes < 60) return `${minutes} min`
+  const hours = minutes / 60
+  return `${hours} ${hours === 1 ? 'hour' : 'hours'}`
+}

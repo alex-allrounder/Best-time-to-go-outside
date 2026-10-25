@@ -6,7 +6,11 @@ import type { Activity, FactorId, HourForecast } from '@/domain/types'
 import { verdictFor } from '@/domain/verdict'
 import { makeHour } from '@/test/factories'
 
-function pointsFor(factor: FactorId, overrides: Partial<HourForecast>, activity: Activity = 'relaxed') {
+function pointsFor(
+  factor: FactorId,
+  overrides: Partial<HourForecast>,
+  activity: Activity = 'relaxed',
+) {
   const { breakdown } = scoreHour(makeHour(12, overrides), { activity, rules })
   return breakdown.find((b) => b.factor === factor)?.points
 }
