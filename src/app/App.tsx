@@ -53,13 +53,13 @@ export function App() {
         onLocate={location.locateMe}
       />
 
-      <main className="mx-auto -mt-10 grid w-full max-w-3xl flex-1 grid-cols-1 content-start gap-3 px-4 pb-6 *:min-w-0 sm:px-6 md:grid-cols-2 md:gap-4">
+      <main className="mx-auto -mt-10 grid w-full max-w-3xl flex-1 grid-cols-1 content-start gap-3 px-4 pb-6 *:min-w-0 sm:px-6 md:grid-cols-2 md:grid-rows-[auto_1fr_auto_auto] md:gap-4">
         {headline.kind === 'ready' && (
           <>
             <VerdictCard
               plan={headline.plan}
               settings={settings}
-              className="md:col-start-1 md:row-start-1"
+              className="md:col-start-1 md:row-start-1 md:self-start"
             />
             {planner}
             <DayTimeline
@@ -73,7 +73,7 @@ export function App() {
               <>
                 <ChecklistCard
                   items={headline.plan.best.checklist}
-                  className="md:col-start-1 md:row-start-2"
+                  className="md:col-start-1 md:row-start-2 md:self-start"
                 />
                 <RunnerUpsCard windows={headline.plan.alternatives} className="md:col-span-2" />
               </>

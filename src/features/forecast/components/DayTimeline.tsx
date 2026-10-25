@@ -64,7 +64,12 @@ function HourCell({
         {Icon && <Icon className="size-4" strokeWidth={2.5} />}
         {hour.status === 'dark' && <Moon className="size-4" />}
       </span>
-      <span className="text-xs text-muted-foreground tabular">
+      <span
+        className={cn(
+          'text-sm tabular',
+          hour.status === 'scored' ? 'font-medium text-foreground' : 'text-muted-foreground',
+        )}
+      >
         {hour.status === 'scored' ? `UV ${hour.uvIndex}` : '–'}
       </span>
     </button>
@@ -110,7 +115,16 @@ interface DayTimelineProps {
   className?: string
 }
 
-export function DayTimeline({ hours, best, nowHour, activity, className }: DayTimelineProps) {
+export function DayTimeline({
+  hours: allHours,
+  best,
+  nowHour,
+  activity,
+  className,
+}: DayTimelineProps) {
+  // Like a weather app, the strip starts at the current hour; earlier hours are excluded anyway.
+  const upcoming = allHours.filter((h) => h.status !== 'past')
+  const hours = upcoming.length > 0 ? upcoming : allHours
   const scrollerRef = useRef<HTMLDivElement>(null)
   const [selected, setSelected] = useState<ScoredHour | null>(null)
   // Kept separate from `selected` so the sheet keeps its content while it animates closed.
@@ -123,8 +137,8 @@ export function DayTimeline({ hours, best, nowHour, activity, className }: DayTi
   const bestLength = best ? best.endHour - best.startHour : 0
 
   // Bring the best window into view whenever the answer changes; without one, show the free
-  // time so its dark or past hours explain why.
-  const focusIndex = bestStart >= 0 ? bestStart : (freeStart ?? Math.max(0, indexOf(nowHour)))
+  // time so its dark hours explain why.
+  const focusIndex = bestStart >= 0 ? bestStart : (freeStart ?? 0)
   useEffect(() => {
     const el = scrollerRef.current
     if (!el) return
@@ -137,7 +151,12 @@ export function DayTimeline({ hours, best, nowHour, activity, className }: DayTi
   }, [focusIndex, bestStart, bestLength, freeIndexes.length])
 
   return (
-    <SectionCard title="Today, hour by hour" icon={CalendarClock} className={className}>
+    <SectionCard
+      title="Today, hour by hour"
+      icon={CalendarClock}
+      className={className}
+      action={<span className="text-xs text-muted-foreground">Tap an hour for details</span>}
+    >
       <div
         ref={scrollerRef}
         className="-mx-4 scrollbar-none overflow-x-auto overscroll-x-contain px-4 sm:-mx-5 sm:px-5"

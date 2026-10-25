@@ -76,11 +76,17 @@ export function HourDetailSheet({ hour, open, activity, onOpenChange }: HourDeta
 
               <table className="w-full text-base">
                 <caption className="sr-only">Score breakdown</caption>
-                <thead className="sr-only">
+                <thead className="text-xs text-muted-foreground">
                   <tr>
-                    <th scope="col">Condition</th>
-                    <th scope="col">Reading</th>
-                    <th scope="col">Points</th>
+                    <th scope="col" className="pb-1 text-left font-normal">
+                      <span className="sr-only">Condition</span>
+                    </th>
+                    <th scope="col" className="pb-1 text-right font-normal">
+                      Reading
+                    </th>
+                    <th scope="col" className="pb-1 text-right font-normal">
+                      Points
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border">
@@ -111,7 +117,7 @@ export function HourDetailSheet({ hour, open, activity, onOpenChange }: HourDeta
                         Score
                       </th>
                       <td className="pt-3 text-right text-lg font-semibold tabular">
-                        {Number(hour.score.toFixed(1))}
+                        {hour.score.toFixed(1)}
                       </td>
                     </tr>
                   </tfoot>

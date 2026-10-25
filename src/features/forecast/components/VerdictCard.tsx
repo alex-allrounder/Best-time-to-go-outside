@@ -35,14 +35,12 @@ export function VerdictCard({ plan, settings, className }: VerdictCardProps) {
       >
         <div className="flex items-center justify-between gap-3">
           <VerdictBadge verdict={best.verdict} size="lg" />
-          <span className="text-sm text-muted-foreground tabular">
-            Score {best.score.toFixed(1)}
+          <span className="flex flex-col items-end text-right leading-tight">
+            <span className="text-lg font-semibold tabular">{best.score.toFixed(1)}</span>
+            <span className="text-xs text-muted-foreground">score, lower is better</span>
           </span>
         </div>
         <p className="text-lg leading-snug font-medium text-pretty">{best.reason}</p>
-        <p className="text-sm text-muted-foreground">
-          Lower scores are better. Tap an hour below to see why.
-        </p>
       </div>
     </section>
   )
