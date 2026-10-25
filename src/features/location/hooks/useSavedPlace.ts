@@ -1,4 +1,3 @@
-import { useCallback } from 'react'
 import { z } from 'zod/mini'
 import { appConfig } from '@/config/app.config'
 import type { Place } from '@/domain/types'
@@ -19,19 +18,16 @@ export function useSavedPlace() {
     NO_PLACES,
   )
 
-  const selectPlace = useCallback(
-    (next: Place) => {
-      setPlaceState(next)
-      // "My location" changes with every fix, so only searched cities are worth remembering.
-      if (next.source !== 'search') return
-      setRecentPlaces((prev) =>
-        [next, ...prev.filter((p) => p.id !== next.id)].slice(0, recentConfig.max),
-      )
-    },
-    [setPlaceState, setRecentPlaces, recentConfig.max],
-  )
+  const selectPlace = (next: Place) => {
+    setPlaceState(next)
+    // "My location" changes with every fix, so only searched cities are worth remembering.
+    if (next.source !== 'search') return
+    setRecentPlaces((prev) =>
+      [next, ...prev.filter((p) => p.id !== next.id)].slice(0, recentConfig.max),
+    )
+  }
 
-  const clearRecentPlaces = useCallback(() => setRecentPlaces(NO_PLACES), [setRecentPlaces])
+  const clearRecentPlaces = () => setRecentPlaces(NO_PLACES)
 
   return { place, selectPlace, recentPlaces, clearRecentPlaces }
 }

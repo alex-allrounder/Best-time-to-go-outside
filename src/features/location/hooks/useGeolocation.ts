@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 import { appConfig } from '@/config/app.config'
 import type { Place } from '@/domain/types'
 
@@ -39,7 +39,7 @@ function toPlace({ coords }: GeolocationPosition): Place {
 export function useGeolocation() {
   const [status, setStatus] = useState<GeolocationStatus>('idle')
 
-  const locate = useCallback(async (): Promise<Place> => {
+  const locate = async (): Promise<Place> => {
     if (!('geolocation' in navigator)) {
       setStatus('error')
       throw new GeolocationError('Your browser does not support location access.', 'unsupported')
@@ -60,7 +60,7 @@ export function useGeolocation() {
       const [message, code] = MESSAGES[(error as GeolocationPositionError).code] ?? MESSAGES[2]!
       throw new GeolocationError(message, code)
     }
-  }, [])
+  }
 
   return { locate, status }
 }

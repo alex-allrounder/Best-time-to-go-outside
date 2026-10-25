@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 import { toast } from 'sonner'
 import type { Place } from '@/domain/types'
 import { GeolocationError, useGeolocation } from '@/features/location/hooks/useGeolocation'
@@ -11,15 +11,12 @@ export function useLocationController() {
   const [sheetOpen, setSheetOpen] = useState(false)
   const { selectPlace } = saved
 
-  const choosePlace = useCallback(
-    (place: Place) => {
-      selectPlace(place)
-      setSheetOpen(false)
-    },
-    [selectPlace],
-  )
+  const choosePlace = (place: Place) => {
+    selectPlace(place)
+    setSheetOpen(false)
+  }
 
-  const locateMe = useCallback(async () => {
+  const locateMe = async () => {
     try {
       choosePlace(await locate())
     } catch (error) {
@@ -30,7 +27,7 @@ export function useLocationController() {
         action: { label: 'Search city', onClick: () => setSheetOpen(true) },
       })
     }
-  }, [choosePlace, locate])
+  }
 
   return {
     ...saved,

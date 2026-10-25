@@ -1,4 +1,3 @@
-import { useCallback } from 'react'
 import { z } from 'zod/mini'
 import { appConfig } from '@/config/app.config'
 import type { PlanSettings } from '@/domain/types'
@@ -19,10 +18,8 @@ export function usePlannerSettings() {
     appConfig.defaultSettings,
   )
 
-  const update = useCallback(
-    (patch: Partial<PlanSettings>) => setSettings((prev) => ({ ...prev, ...patch })),
-    [setSettings],
-  )
+  const update = (patch: Partial<PlanSettings>) =>
+    setSettings((prev) => ({ ...prev, ...patch }))
 
   return { settings, update, resetSettings }
 }

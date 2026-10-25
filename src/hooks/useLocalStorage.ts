@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { z } from 'zod/mini'
 
 function read<T>(key: string, schema: z.ZodMiniType<T>, fallback: T): T {
@@ -28,7 +28,7 @@ export function useLocalStorage<T>(key: string, schema: z.ZodMiniType<T>, fallba
     }
   }, [key, value])
 
-  const reset = useCallback(() => setValue(fallback), [fallback])
+  const reset = () => setValue(fallback)
 
   return [value, setValue, reset] as const
 }

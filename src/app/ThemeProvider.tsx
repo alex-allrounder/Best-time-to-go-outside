@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useState, type ReactNode } from 'react'
+import { useEffect, useLayoutEffect, useState, type ReactNode } from 'react'
 import { ThemeContext, type Theme } from '@/hooks/useTheme'
 
 const darkQuery = '(prefers-color-scheme: dark)'
@@ -44,22 +44,19 @@ export function ThemeProvider({
       .forEach((meta) => meta.setAttribute('content', sky))
   }, [resolvedTheme])
 
-  const setTheme = useCallback(
-    (next: Theme) => {
-      setThemeState(next)
-      try {
-        if (next === 'system') window.localStorage.removeItem(storageKey)
-        else window.localStorage.setItem(storageKey, next)
-      } catch {
-        // Storage unavailable: the choice still applies for this visit.
-      }
-    },
-    [storageKey],
-  )
+  const setTheme = (next: Theme) => {
+    setThemeState(next)
+    try {
+      if (next === 'system') window.localStorage.removeItem(storageKey)
+      else window.localStorage.setItem(storageKey, next)
+    } catch {
+      // Storage unavailable: the choice still applies for this visit.
+    }
+  }
 
-  const value = useMemo(
-    () => ({ theme, resolvedTheme, setTheme }),
-    [theme, resolvedTheme, setTheme],
+  return (
+    <ThemeContext.Provider value={{ theme, resolvedTheme, setTheme }}>
+      {children}
+    </ThemeContext.Provider>
   )
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
 }

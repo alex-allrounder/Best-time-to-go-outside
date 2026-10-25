@@ -1,4 +1,3 @@
-import { useMemo } from 'react'
 import { rules } from '@/config/rules'
 import { planDay } from '@/domain/planDay'
 import type { DayForecast, DayPlan, PlanSettings } from '@/domain/types'
@@ -19,8 +18,6 @@ export function useDayPlan(
   const now = useNow()
   const nowHour = forecast ? hourAtOffset(forecast.utcOffsetSeconds, now) : null
 
-  return useMemo(() => {
-    if (!forecast || nowHour === null) return null
-    return { plan: planDay({ hours: forecast.hours, settings, nowHour, rules }), nowHour }
-  }, [forecast, settings, nowHour])
+  if (!forecast || nowHour === null) return null
+  return { plan: planDay({ hours: forecast.hours, settings, nowHour, rules }), nowHour }
 }
